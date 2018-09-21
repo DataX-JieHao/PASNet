@@ -8,7 +8,7 @@ def auc(y_true, y_pred):
 		y_true = y_true.cpu().detach()
 		y_pred = y_pred.cpu().detach()
 	###
-	auc = roc_auc_score(y_true.numpy(), y_pred.numpy(), average='weighted')
+	auc = roc_auc_score(y_true.numpy(), y_pred.numpy())
 	return(auc)
 
 def f1(y_true, y_pred):
@@ -21,5 +21,5 @@ def f1(y_true, y_pred):
 		y = y.cpu().detach()
 		pred = pred.cpu().detach()
 	###
-	f1 = f1_score(y.numpy(), pred.numpy(), average='weighted')
+	f1 = f1_score(y.numpy(), pred.numpy())
 	return(f1)
