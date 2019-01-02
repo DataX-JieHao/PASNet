@@ -18,13 +18,14 @@ Dropout_Rates = [0.8, 0.7] ###sub-network setup
 ''' load data and pathway '''
 pathway_mask = load_pathway("data/gbm_binary_pathway_mask_reactome_574.csv", dtype)
 
-
+N = 10 # number of repeated times
+K = 5 # number of folds
 opt_lr = 1e-4
 opt_l2 = 3e-4
 test_auc = []
 test_f1 = []
-for replicate in range(10):
-	for fold in range(5):
+for replicate in range(N):
+	for fold in range(K):
 		print("replicate: ", replicate, "fold: ", fold)
 		x_train, y_train = load_data("data/std_train_"+str(replicate)+"_"+str(fold)+".csv", dtype)
 		x_test, y_test = load_data("data/std_test_"+str(replicate)+"_"+str(fold)+".csv", dtype)
