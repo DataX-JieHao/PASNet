@@ -24,11 +24,11 @@
 ## Example Datasets
 To get started, you need to download example datasets from URLs as below:
 
-[Train data](http://datax.kennesaw.edu/PASNet/train.csv) 
+[Train data](http://dataxlab.org/PASNet/train.csv) 
 
-[Validation data](http://datax.kennesaw.edu/PASNet/validation.csv)
+[Validation data](http://dataxlab.org/PASNet/validation.csv)
 
-[Pathway Mask data](http://datax.kennesaw.edu/PASNet/pathway_mask.csv)
+[Pathway Mask data](http://dataxlab.org/PASNet/pathway_mask.csv)
 
 ## Empirical Search for Hyperparameters 
 Run_EmpiricalSearch.py: to find the optimal pair of hyperparmaters for PASNet before performing cross validation. PASNet is trained with the inputs from train.csv. Hyperparameters are optimized by emipirical search with validation.csv.
